@@ -4,8 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean class="com.epam.quoters.InjectRandomIntAnnotationBeanPostprocessor"/>
+
     <bean class="com.epam.quoters.TerminatorQuoter" id="terminatorQuoter">
         <property name="message" value="I'll be back!"/>
     </bean>
+
 
 </beans>
