@@ -12,10 +12,6 @@ public class TerminatorQuoterTest {
     @Test
     public void test() throws Exception{
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
-        while(true){
-            Thread.sleep(1000);
-            context.getBean(Quoter.class).sayQuote();
-        }
     }
 
 }

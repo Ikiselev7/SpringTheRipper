@@ -7,6 +7,8 @@
 
     <context:annotation-config/>
 
+    <bean class="com.epam.quoters.PostProxyInvokerContextListener"/>
+
     <bean class="com.epam.quoters.ProfilingHandlerBeanPostProcessor"/>
 
     <bean class="com.epam.quoters.InjectRandomIntAnnotationBeanPostprocessor"/>
