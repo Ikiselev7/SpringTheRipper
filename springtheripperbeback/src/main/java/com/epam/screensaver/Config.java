@@ -9,7 +9,7 @@ import java.util.Random;
 @ComponentScan(basePackages = "com.epam.screensaver")
 public class Config {
     @Bean
-    @Scope(value = "prototype")
+    @Scope(value = "periodical")
     public Color color(){
         Random random = new Random();
         return new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255));
@@ -24,14 +24,5 @@ public class Config {
             }
         };
     }
-
-    public static void main(String[] args) throws InterruptedException {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-        while (true) {
-            context.getBean(ColorFrame.class).showOnRandomPlace();
-            Thread.sleep(50);
-        }
-    }
-
 
 }
