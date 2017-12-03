@@ -10,7 +10,5 @@ public class PropertyFileApplicationContext extends GenericApplicationContext {
         int i = reader.loadBeanDefinitions(filename);
         System.out.println("found " + i + " beans");
         refresh();
-
-
     }
 }
