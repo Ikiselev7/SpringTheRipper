@@ -10,8 +10,9 @@ public class TerminatorQuoterTest {
 
 
     @Test
-    public void test() throws Exception{
+    public void test() throws Exception {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+        context.getBean(Quoter.class).sayQuote();
     }
 
 }
